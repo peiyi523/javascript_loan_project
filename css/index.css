@@ -59,3 +59,14 @@ label{
     font-weight: bold;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
+#result{
+    display: none;
+    width:350px;
+    margin: 0 auto;
+    background-color: aquamarine;
+    color:red;
+    padding: 16px;
+    
+    
+}
