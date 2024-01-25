@@ -1,0 +1,61 @@
+body{
+background-color: grey;
+}
+
+#container{
+    text-align: center;
+}
+.title{
+    color: wheat;
+}
+
+form{
+    width: 350px;
+    background-color: palevioletred;
+    margin: 0 auto;
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+
+}
+#info{
+    display: inline-block;
+    /* background-color: aquamarine; */
+    text-align: left;
+    margin: 12px auto;
+    color: navy;
+}
+#info2{
+    text-align: center;
+    margin: 12px;
+}
+button{
+    width: 100px;
+    border: 0;
+    height: 24px;
+    background-color: rgb(150, 229, 229);
+    border-radius: 6px;
+    margin: 0 6px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#reset{
+    background-color: yellow;
+    color: black;
+}
+#calcRule{
+    background-color: plum;
+    border-radius: 6px;
+    margin-bottom: 24px;
+}
+
+input{
+    text-align: center;
+    font-size: 12px;
+    margin-top: 6px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+label{
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
