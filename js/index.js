@@ -6,13 +6,26 @@ const payment2El = document.querySelector("#payment2")
 const feeEl = document.querySelector("#fee")
 const calcEl = document.querySelector("#calc")
 
+
 console.log(amountEl, yearsEl, rateEl, payment1El, payment2El, feeEl, calcEl);
 calcEl.addEventListener("click", calcLoan);
+
 
 function calcLoan() {
     let amount = amountEl.value * 10000;
     let years = yearsEl.value;
     let rate = rateEl.value / 100;
+
+    if (amount == "") {
+        alert("請輸入貸款金額");
+    }
+    if (years == "") {
+        alert("請輸入貸款年限");
+    }
+    if (rate == "") {
+        alert("請輸入貸款利率");
+    }
+
     // let fee = 0;
     // if (feeEl.checked) {
     //     fee = 5000
@@ -35,9 +48,24 @@ function calcLoan() {
         resultEl.style.display = "block";
     }, 500)
 
-
-
+    const resetEl = document.querySelector("#reset")
+    resetEl.addEventListener("click", resetForm);
+    function resetForm() {
+        amountEl.value = "";
+        yearsEl.value = "";
+        rateEl.value = "";
+        resultEl.value = "";
+    }
     console.log(amount, years, rate, fee, rule, totalAmount, totalInterest);
 
-
 }
+
+/**問老師
+ * 51。為什麼按清除鈕時底下的result不會被清掉
+ * 19~27。寫三次嗎?
+ * 有空值時跳出alert，按了確定之後result應該不能跑出來要等重新輸入正確值後按計算才能出現
+
+
+
+
+*/
