@@ -6,7 +6,7 @@ const payment2El = document.querySelector("#payment2")
 const feeEl = document.querySelector("#fee")
 const calcEl = document.querySelector("#calc")
 const resultEl = document.querySelector("#result");
-const tableEl = document.querySelector("#table");
+const tableEl = document.querySelector("#table tbody");
 
 
 console.log(amountEl, yearsEl, rateEl, payment1El, payment2El, feeEl, calcEl, tableEl);
@@ -70,15 +70,24 @@ function calcLoan() {
 }
 
 function drawTable(datas) {
-    let tableStr = "<ul>"
+    let tableStr = "";
     for (let i = 0; i < datas.length; i++) {
-        console.log(datas[i].join(","));
-        tableStr += `<li>${datas[i].join(";")}</li>`
+        tableStr += "<tr>"
+        for (let j = 0; j < datas[i].length; j++) {
+            tableStr += `<td>${datas[i][j]}</td>`;
+        }
+        tableStr += "</tr>";
     }
-
-    tableStr += "</ul>";
-    console.log(tableStr);
     tableEl.innerHTML = tableStr;
+    // let tableStr = "<ul>"
+    // for (let i = 0; i < datas.length; i++) {
+    //     console.log(datas[i].join(","));
+    //     tableStr += `<li>${datas[i].join(";")}</li>`
+    // }
+
+    // tableStr += "</ul>";
+    // console.log(tableStr);
+    // tableEl.innerHTML = tableStr;
 }
 
 
