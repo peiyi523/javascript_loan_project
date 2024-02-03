@@ -7,7 +7,7 @@ const feeEl = document.querySelector("#fee")
 const calcEl = document.querySelector("#calc")
 const resultEl = document.querySelector("#result");
 const tableEl = document.querySelector("#table tbody");
-
+const resetEl = document.querySelector("#reset")
 
 console.log(amountEl, yearsEl, rateEl, payment1El, payment2El, feeEl, calcEl, tableEl);
 calcEl.addEventListener("click", calcLoan);
@@ -94,7 +94,7 @@ function drawTable(datas) {
 
 
 
-const resetEl = document.querySelector("#reset")
+
 resetEl.addEventListener("click", resetForm);
 function resetForm() {
     amountEl.value = "";
