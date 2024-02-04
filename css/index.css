@@ -85,13 +85,14 @@ width: 80%;
 margin: 6px auto;
 border: 1px solid black;
 border-collapse: collapse;
-background-color: rgb(154, 200, 240);
+background-color: rgb(159, 153, 232);
 }
 
 thead th {
-    background-color: pink;
+    background-color: rgb(193, 32, 187);
     border: 1px solid #ddd;
     font-size: 18px;
+    color:aliceblue
 }
 
 td{
@@ -99,6 +100,6 @@ td{
     padding: 6px;
     }
 tbody tr:nth-child(even){
-    background-color: rgb(210, 172, 123);
+    background-color:rgb(209, 201, 249);
 }
 
