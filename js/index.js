@@ -134,8 +134,8 @@ function rule1(total_amount, years, rate) {
     * 每月應付本息金額之平均攤還率＝每月應還本金金額＋每月應付利息金額 
     * 每月應付利息金額＝本金餘額×月利率
   */
-function rule2(totalAmount, years, rate) {
-    let amount = totalAmount;
+function rule2(total_amount, years, rate) {
+    let amount = total_amount;
     let period = years * 12;
     let month_rate = rate / 100 / 12;
     // 計算每月還款金額（本息平均攤還）
