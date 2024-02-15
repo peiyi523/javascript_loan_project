@@ -1,15 +1,16 @@
-body{
-background-color: grey;
+body {
+    background-color: grey;
 }
 
-#container{
+#container {
     text-align: center;
 }
-.title{
+
+.title {
     color: wheat;
 }
 
-form{
+form {
     width: 350px;
     background-color: palevioletred;
     margin: 0 auto;
@@ -18,88 +19,93 @@ form{
     text-align: center;
 
 }
-#info{
+
+#info {
     display: inline-block;
     /* background-color: aquamarine; */
     text-align: left;
     margin: 12px auto;
     color: navy;
 }
-#info2{
+
+#info2 {
     text-align: center;
     margin: 12px;
 }
-button{
+
+button {
     width: 100px;
     border: 0;
     height: 24px;
     background-color: rgb(150, 229, 229);
     border-radius: 6px;
     margin: 0 6px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-#reset{
+
+#reset {
     background-color: yellow;
     color: rgb(226, 12, 12);
 }
-#calcRule{
+
+#calcRule {
     background-color: plum;
     border-radius: 6px;
     margin-bottom: 24px;
 }
 
-input{
+input {
     text-align: center;
     font-size: 16px;
     margin: 6px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-label{
+label {
     font-weight: bold;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-select{
+select {
     text-align: center;
     font-size: 16px;
     width: 190px;
     height: 27px;
     margin: 6px;
-    }
-
-   
-#result{
-    display: none;
-    width:350px;
-    margin: 0 auto;
-    background-color: rgb(83, 83, 83);
-    color:antiquewhite;
-    padding: 16px;
-    
-    
 }
 
-table{
-width: 80%;
-margin: 6px auto;
-border: 1px solid black;
-border-collapse: collapse;
-background-color: rgb(159, 153, 232);
+
+#result {
+    display: none;
+    width: 350px;
+    margin: 0 auto;
+    background-color: rgb(83, 83, 83);
+    color: antiquewhite;
+    padding: 16px;
+
+
+}
+
+table {
+    width: 80%;
+    margin: 6px auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: rgb(159, 153, 232);
 }
 
 thead th {
     background-color: rgb(193, 32, 187);
     border: 1px solid #ddd;
     font-size: 18px;
-    color:aliceblue
+    color: aliceblue
 }
 
-td{
+td {
     border: 1px solid #642222;
     padding: 6px;
-    }
-tbody tr:nth-child(even){
-    background-color:rgb(209, 201, 249);
 }
 
+tbody tr:nth-child(even) {
+    background-color: rgb(209, 201, 249);
+}

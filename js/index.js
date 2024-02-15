@@ -51,11 +51,13 @@ function calcLoan() {
         result = rule1(amount, years, rate);
         console.log(result);
 
-        // } else (rule == 2){
-        //     result = rule2(amount, years, rate);
-        //     console.log(result);
+    } else if (rule == 2) {
+        result = rule2(amount, years, rate);
+        console.log(result);
+
 
     }
+
     let totalInterest = result[1];
     let totalAmount = amount + totalInterest + fee;
     console.log(amount, years, rate, fee, rule, totalAmount, totalInterest)
@@ -147,7 +149,7 @@ function rule2(total_amount, years, rate) {
     for (let i = 0; i < period; i++) {
         interest = Math.round(amount * month_rate);
         principalPayment = month_pay - interest;
-        amount -= principal_payment;
+        amount -= principalPayment;
         if (i == period - 1) {
             datas.push([i + 1, month_pay + amount, interest, month_pay + amount + interest, 0]);
 
@@ -163,5 +165,5 @@ function rule2(total_amount, years, rate) {
 
 
 /**問老師
- * 54行
+ * 54行打開
 */
