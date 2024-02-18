@@ -54,8 +54,6 @@ function calcLoan() {
     } else if (rule == 2) {
         result = rule2(amount, years, rate);
         console.log(result);
-
-
     }
 
     let totalInterest = result[1];
@@ -109,7 +107,6 @@ function rule1(total_amount, years, rate) {
     let period = years * 12;
     let month_rate = rate / 100 / 12;
     let month_pay = parseInt(amount / period);
-
     let totalInterest = 0;
     let datas = [];
 
@@ -140,9 +137,8 @@ function rule2(total_amount, years, rate) {
     let amount = total_amount;
     let period = years * 12;
     let month_rate = rate / 100 / 12;
-    // 計算每月還款金額（本息平均攤還）
-    let month_pay = amount * (month_rate * Math.pow(1 + month_rate, period)) / (Math.pow(1 + month_rate, period) - 1);
-
+    // 計算每月還款金額（本息平均攤還）,使用parseInt取到整數
+    let month_pay = parseInt(amount * (month_rate * Math.pow(1 + month_rate, period)) / (Math.pow(1 + month_rate, period) - 1));
     let totalInterest = 0;
     let datas = [];
 
@@ -159,7 +155,6 @@ function rule2(total_amount, years, rate) {
 
         totalInterest += interest;
     }
-
     return [datas, totalInterest];
 }
 
