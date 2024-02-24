@@ -121,7 +121,7 @@ function rule1(total_amount, years, rate) {
         }
         totalInterest += interest;
     }
-    // console.log(datas);
+    console.log(datas, totalInterest);
     return [datas, totalInterest];
 }
 /**本息平均攤還計算公式：
@@ -140,6 +140,7 @@ function rule2(total_amount, years, rate) {
     // 計算每月還款金額（本息平均攤還）,使用parseInt取到整數
     let month_pay = parseInt(amount * (month_rate * Math.pow(1 + month_rate, period)) / (Math.pow(1 + month_rate, period) - 1));
 
+    let totalInterest = 0;
     let datas = [];
 
     for (let i = 0; i < period; i++) {
@@ -153,9 +154,10 @@ function rule2(total_amount, years, rate) {
             datas.push([i + 1, principalPayment, interest, month_pay, amount]);
         }
 
-
+        totalInterest += interest
     }
-    return [datas];
+    console.log(datas, totalInterest);
+    return [datas, totalInterest];
 }
 
 
