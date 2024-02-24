@@ -139,7 +139,7 @@ function rule2(total_amount, years, rate) {
     let month_rate = rate / 100 / 12;
     // 計算每月還款金額（本息平均攤還）,使用parseInt取到整數
     let month_pay = parseInt(amount * (month_rate * Math.pow(1 + month_rate, period)) / (Math.pow(1 + month_rate, period) - 1));
-    let totalInterest = 0;
+
     let datas = [];
 
     for (let i = 0; i < period; i++) {
@@ -147,18 +147,16 @@ function rule2(total_amount, years, rate) {
         principalPayment = month_pay - interest;
         amount -= principalPayment;
         if (i == period - 1) {
-            datas.push([i + 1, month_pay + amount, interest, month_pay + amount + interest, 0]);
+            datas.push([i + 1, 0, interest, month_pay, 0]);
 
         } else {
-            datas.push([i + 1, month_pay, interest, month_pay + interest, amount]);
+            datas.push([i + 1, principalPayment, interest, month_pay, amount]);
         }
 
-        totalInterest += interest;
+
     }
-    return [datas, totalInterest];
+    return [datas];
 }
 
 
-/**問老師
- * 54行打開
-*/
+
