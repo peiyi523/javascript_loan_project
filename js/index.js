@@ -121,7 +121,7 @@ function rule1(total_amount, years, rate) {
         }
         totalInterest += interest;
     }
-    console.log(datas, totalInterest);
+    // console.log(datas, totalInterest);
     return [datas, totalInterest];
 }
 /**本息平均攤還計算公式：
@@ -156,7 +156,7 @@ function rule2(total_amount, years, rate) {
 
         totalInterest += interest
     }
-    console.log(datas, totalInterest);
+    // console.log(datas, totalInterest);
     return [datas, totalInterest];
 }
 

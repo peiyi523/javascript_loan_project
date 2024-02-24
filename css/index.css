@@ -12,7 +12,7 @@ body {
 
 form {
     width: 350px;
-    background-color: palevioletred;
+    background-color: rgb(234, 164, 187);
     margin: 0 auto;
     padding: 12px;
     border-radius: 6px;
@@ -49,7 +49,7 @@ button {
 }
 
 #calcRule {
-    background-color: plum;
+    background-color: rgb(236, 126, 236);
     border-radius: 6px;
     margin-bottom: 24px;
 }
