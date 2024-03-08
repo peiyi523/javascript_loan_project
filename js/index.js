@@ -85,13 +85,12 @@ function drawTable(datas) {
     //     console.log(datas[i].join(","));
     //     tableStr += `<li>${datas[i].join(";")}</li>`
     // }
-
     // tableStr += "</ul>";
     // console.log(tableStr);
     // tableEl.innerHTML = tableStr;
 }
 
-const resetEl = document.querySelector("#reset")
+// const resetEl = document.querySelector("#reset")
 resetEl.addEventListener("click", resetForm);
 function resetForm() {
     amountEl.value = "";
