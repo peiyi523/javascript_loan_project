@@ -9,6 +9,7 @@ const resultEl = document.querySelector("#result");
 const tableEl = document.querySelector("#table tbody");
 const resetEl = document.querySelector("#reset")
 
+
 console.log(amountEl, yearsEl, rateEl, payment1El, payment2El, feeEl, calcEl, tableEl);
 calcEl.addEventListener("click", calcLoan);
 
@@ -57,11 +58,22 @@ function calcLoan() {
     }
 
     let totalInterest = result[1];
+    console.log(totalInterest);
     let totalAmount = amount + totalInterest + fee;
     console.log(amount, years, rate, fee, rule, totalAmount, totalInterest)
 
-    document.querySelector(".totalAmount").innerText = totalAmount + (fee == 0 ? "" : "(含手續費)");
-    document.querySelector(".totalInterest").innerText = totalInterest;
+    // 解決按了清除鈕重新鍵入貸款資料後，按計算鈕，下方table無回傳新計算結果之問題
+    let totalAmountEl = document.querySelector(".totalAmount");
+    if (totalAmountEl) {
+        document.querySelector(".totalAmount").innerText = totalAmount + (fee == 0 ? "" : "(含手續費)");
+
+    }
+    let totalInterestEl = document.querySelector(".totalInterest");
+    if (totalInterestEl) {
+        document.querySelector(".totalInterest").innerText = totalInterest;
+
+    }
+
 
     resultEl.style.display = "none";
     setTimeout(function () {
@@ -80,14 +92,7 @@ function drawTable(datas) {
         tableStr += "</tr>";
     }
     tableEl.innerHTML = tableStr;
-    // let tableStr = "<ul>"
-    // for (let i = 0; i < datas.length; i++) {
-    //     console.log(datas[i].join(","));
-    //     tableStr += `<li>${datas[i].join(";")}</li>`
-    // }
-    // tableStr += "</ul>";
-    // console.log(tableStr);
-    // tableEl.innerHTML = tableStr;
+
 }
 
 
@@ -96,10 +101,10 @@ function resetForm() {
     amountEl.value = "";
     yearsEl.value = "";
     rateEl.value = "";
-    resultEl.innerText = "";
-    tableEl.innerHTML = "";
+    // resultEl.innerText = "";（resultEl不要清掉，不然按清除重算後會出不來)
+
 }
-// console.log(amount, years, rate, fee, rule, totalAmount, totalInterest);
+
 
 function rule1(total_amount, years, rate) {
     let amount = total_amount;
@@ -120,7 +125,7 @@ function rule1(total_amount, years, rate) {
         }
         totalInterest += interest;
     }
-    // console.log(datas, totalInterest);
+
     return [datas, totalInterest];
 }
 /**本息平均攤還計算公式：
@@ -155,7 +160,7 @@ function rule2(total_amount, years, rate) {
 
         totalInterest += interest
     }
-    // console.log(datas, totalInterest);
+
     return [datas, totalInterest];
 }
 
